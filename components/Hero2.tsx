@@ -9,41 +9,47 @@ type Hero2Props = {
 };
 
 export default function Hero2({ title, description }: Hero2Props) {
-  const bgStyle: React.CSSProperties = {
-    // white base, then gradient layer + repeated image on top
-    backgroundColor: "#ffffff",
-    backgroundImage:
-      "linear-gradient(to bottom, rgba(14,0,102,0.92), rgba(32,20,255,0.8)), url('/rubix.png')",
-    backgroundRepeat: "repeat-x",
-    backgroundSize: "50% 100%",
-    backgroundPosition: "top center",
-  };
-
   return (
-    <section className="relative overflow-hidden" style={bgStyle}>
+    <section className="relative min-h-[80vh] w-full overflow-hidden flex flex-col bg-gradient-to-br from-primary to-secondary">
       <div className="mt-10">
-       <Navbar />
-            </div>
-      <div className="relative z-10 mx-auto w-full max-w-3xl mx-auto  py-20 md:my-16 text-center flex flex-col gap-6 border-[1px] border-white/20 rounded-xl">
-        <h1 className="text-4xl md:text-7xl font-extrabold text-white leading-tight">
-          {title}
-        </h1>
-        {description && (
-          <p className="mt-4 text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
-            {description}
-          </p>
-        )}
+        <Navbar />
       </div>
 
       <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-40"
+        className="absolute z-0 bg-[url('/herobg.png')] bg-cover bg-center mt-0 opacity-30 pointer-events-none"
         style={{
-          background:
-            "linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1))",
-          opacity: 1,
+          width: "900px",
+          height: "900px",
+          top: "-100px",
+          transform: "rotate(10deg)",
+          transformOrigin: "0% 50%",
         }}
       />
+      <div
+        className="absolute top-0 right-0 z-0 h-[700px] w-[700px] bg-[url('/herobg.png')] bg-cover bg-right bg-no-repeat opacity-40 pointer-events-none"
+        style={{ transform: "translateX(75%) rotate(100deg)" }}
+      />
+
+      {/* Content (kept as Hero2) */}
+      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-4 py-20 text-white">
+        <div className="relative w-full max-w-3xl">
+          <div className="relative rounded-2xl shadow-[0_0_15px_rgba(20,28,255,0.4),inset_0_0_10px_rgba(20,28,255,0.2)] bg-secondary/0 p-8 text-center shadow-2xl backdrop-blur-[4px] before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-[secondary]/15 before:to-[secondary]/10 before:content-['']">
+            <div className="relative z-10">
+              <h1 className="mb-4 text-4xl font-extrabold leading-tight sm:text-5xl">
+                {title}
+              </h1>
+              {description && (
+                <p className="mx-auto max-w-xl text-sm text-white/90 sm:text-base">
+                  {description}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom fade */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }
