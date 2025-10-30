@@ -91,25 +91,25 @@ export default function Navbar() {
               Home
             </Link>
             <Link
-              href="#about"
+              href="/about"
               className="text-white font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
             >
               About Us
             </Link>
             <Link
-              href="#services"
+              href="/services"
               className="text-white font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
             >
               Services
             </Link>
             <Link
-              href="#contact"
+              href="/contact"
               className="text-white font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
             >
               Contact
             </Link>
             <Link
-              href="#get-started"
+              href="get-started"
               className="text-[secondary] font-semibold py-1 px-2 rounded bg-white hover:bg-[#F3F4F6] transition"
             >
               Get Started

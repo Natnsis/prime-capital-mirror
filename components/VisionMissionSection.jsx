@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Rocket,ArrowRight  } from "lucide-react";
+import { Target, Rocket, ArrowRight } from "lucide-react";
 
 export default function VisionMissionSection() {
   return (
@@ -9,14 +9,13 @@ export default function VisionMissionSection() {
         {/* Header */}
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-primary to-secondary/50 bg-clip-text text-transparent">
-  Guided by Vision, Driven by Mission
-</h2>
-
+            Guided by Vision, Driven by Mission
+          </h2>
         </div>
 
         {/* Vision / Mission Cards */}
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="shadow-md border border-gray-200  rounded-2xl">
+          <Card className="shadow-md border border-gray-200  rounded-2xl hover:border-primary">
             <CardContent className="p-6 text-left space-y-4">
               <div className="flex items-center gap-3 text-primary">
                 <Target className="w-6 h-6" />
@@ -24,13 +23,14 @@ export default function VisionMissionSection() {
               </div>
               <p className="text-gray-600  leading-relaxed">
                 To be the leading and most trusted investment banking partner in
-                Ethiopia by 2030 — driving the growth of a vibrant capital market
-                through innovation, integrity, and world-class operations.
+                Ethiopia by 2030 — driving the growth of a vibrant capital
+                market through innovation, integrity, and world-class
+                operations.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="shadow-md border border-gray-200  rounded-2xl">
+          <Card className="shadow-md border border-gray-200  rounded-2xl hover:border-primary">
             <CardContent className="p-6 text-left space-y-4">
               <div className="flex items-center gap-3 text-primary">
                 <Rocket className="w-6 h-6" />
@@ -57,13 +57,14 @@ export default function VisionMissionSection() {
             partnerships, and world-class execution — shaping a sustainable
             future for businesses and investors.
           </p>
-          <Button  className="rounded-lg px-6 py-3 font-semibold text-white shadow-lg transition-all 
+          <Button
+            className="rounded-lg px-6 py-3 font-semibold text-white shadow-lg transition-all 
                              bg-gradient-to-r from-primary to-secondary 
-                             hover:from-primary/90 hover:to-secondary/90 hover:shadow-xl">
-  
-  Learn More
-  <ArrowRight className="w-4 h-4" />
-</Button>
+                             hover:from-primary/90 hover:to-secondary/90 hover:shadow-xl"
+          >
+            Learn More
+            <ArrowRight className="w-4 h-4" />
+          </Button>
         </div>
       </div>
     </section>

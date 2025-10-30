@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import { Lightbulb, Shuffle, ShieldCheck, Award } from "lucide-react"
+import { motion } from "framer-motion";
+import { Lightbulb, Shuffle, ShieldCheck, Award } from "lucide-react";
 
 const strengths = [
   {
@@ -12,8 +13,7 @@ const strengths = [
   {
     icon: <Shuffle className="w-6 h-6 text-white" />,
     title: "M&A Advisory",
-    description:
-      "Buy-side, sell-side, and cross-border advisory services.",
+    description: "Buy-side, sell-side, and cross-border advisory services.",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-white" />,
@@ -27,7 +27,7 @@ const strengths = [
     description:
       "Delivering world-class financial solutions backed by qualified professionals and international best practices.",
   },
-]
+];
 
 export default function SignatureStrengths() {
   return (
@@ -37,17 +37,19 @@ export default function SignatureStrengths() {
           Our <span className="text-[#1E3AFF]">Signature Strengths</span>
         </h2>
         <p className="text-gray-600 mt-2">
-          Four pillars that define our commitment to Ethiopia’s financial excellence
+          Four pillars that define our commitment to Ethiopia’s financial
+          excellence
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {strengths.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              whileHover={{ scale: 1.01 }}
               className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 
                          backdrop-blur-xl shadow-[0_4px_25px_rgba(20,28,255,0.15)] 
                          hover:shadow-[0_8px_35px_rgba(20,28,255,0.25)] 
-                         p-6 text-left transition-all duration-300 hover:-translate-y-1 bg-cover bg-center bg-no-repeat"
+                         p-6 text-left transition-all duration-300 hover:-translate-y-1 bg-cover bg-center bg-no-repeat hover:border-[#0E0066]"
               style={{ backgroundImage: "url(/back-grid.jpg)" }}
             >
               {/* Glow gradient ring */}
@@ -55,17 +57,23 @@ export default function SignatureStrengths() {
 
               {/* Card content */}
               <div className="relative z-10">
-                <div className="bg-linear-to-br from-primary to-secondary w-10 h-10 rounded-full 
-                                flex items-center justify-center mb-4 shadow-md">
+                <div
+                  className="bg-linear-to-br from-primary to-secondary w-10 h-10 rounded-full 
+                                flex items-center justify-center mb-4 shadow-md"
+                >
                   {item.icon}
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                <h3 className="font-semibold text-gray-800 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {item.description}
+                </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

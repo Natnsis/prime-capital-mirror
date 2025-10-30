@@ -7,7 +7,7 @@ export default function Hero() {
     <section className=" min-h-screen w-full overflow-hidden  flex flex-col">
       {/* Main Background */}
       <div
-        className="absolute z-0 bg-[url('/herobg.png')] bg-cover bg-center mt-0 opacity-30 pointer-events-none"
+        className="absolute -z-10 bg-[url('/herobg.png')] bg-cover bg-center mt-0 opacity-30 pointer-events-none"
         style={{
           width: "900px",
           height: "900px",
@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="mt-10"></div>
 
       <div
-        className="absolute top-0 right-0 z-0 h-[700px] w-[700px] bg-[url('/herobg.png')] bg-cover bg-right bg-no-repeat opacity-40 pointer-events-none"
+        className="absolute top-0 right-0 -z-10 h-[700px] w-[700px] bg-[url('/herobg.png')] bg-cover bg-right bg-no-repeat opacity-40 pointer-events-none"
         style={{
           transform: "translateX(75%) rotate(100deg)",
         }}
