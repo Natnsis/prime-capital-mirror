@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Navbar from "./Navbar";
 
 type Hero2Props = {
   title: React.ReactNode;
@@ -10,13 +9,9 @@ type Hero2Props = {
 
 export default function Hero2({ title, description }: Hero2Props) {
   return (
-    <section className="relative min-h-[80vh] w-full overflow-hidden flex flex-col bg-gradient-to-br from-primary to-secondary">
-      <div className="mt-10">
-        <Navbar />
-      </div>
-
+    <section className="relative isolate min-h-[80vh] w-full overflow-hidden flex flex-col bg-gradient-to-br from-primary to-secondary">
       <div
-        className="absolute z-0 bg-[url('/herobg.png')] bg-cover bg-center mt-0 opacity-30 pointer-events-none"
+        className="absolute -z-10 bg-[url('/herobg.png')] bg-cover bg-center mt-0 opacity-30 pointer-events-none"
         style={{
           width: "900px",
           height: "900px",
@@ -26,7 +21,7 @@ export default function Hero2({ title, description }: Hero2Props) {
         }}
       />
       <div
-        className="absolute top-0 right-0 z-0 h-[700px] w-[700px] bg-[url('/herobg.png')] bg-cover bg-right bg-no-repeat opacity-40 pointer-events-none"
+        className="absolute top-0 right-0 -z-10 h-[700px] w-[700px] bg-[url('/herobg.png')] bg-cover bg-right bg-no-repeat opacity-40 pointer-events-none"
         style={{ transform: "translateX(75%) rotate(100deg)" }}
       />
 

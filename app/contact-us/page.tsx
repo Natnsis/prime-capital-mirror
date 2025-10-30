@@ -53,7 +53,7 @@ export default function Contact() {
               key={i}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative overflow-hidden group p-6 bg-white/90 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 bg-cover bg-center bg-no-repeat"
+              className="relative overflow-hidden group p-6 bg-white/90 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 bg-cover bg-center bg-no-repeat hover:border-[#0E0066]"
               style={{ backgroundImage: "url(/back-grid.jpg)" }}
             >
               <div className="mb-4 mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full text-white bg-linear-to-br from-[#0E0066] to-[#2014FF] shadow-sm transition-transform group-hover:scale-105">
@@ -84,7 +84,7 @@ export default function Contact() {
           <motion.div
             whileHover={{ y: -4, scale: 1.01 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="rounded-2xl p-6 bg-white  border border-gray-200 shadow"
+            className="rounded-2xl p-6 bg-white  border border-gray-200 shadow hover:border-[#0E0066]"
           >
             <h3 className="text-2xl font-bold text-[#0E0066] mb-3">
               New Client Inquiries
@@ -118,8 +118,8 @@ export default function Contact() {
               financial future. We value excellence, integrity, and innovation.
             </p>
             <p className="text-sm text-[#504785]  mb-3">
-              We&apos;re always looking for exceptional individuals who share our
-              commitment to excellence, integrity, and innovation.
+              We&apos;re always looking for exceptional individuals who share
+              our commitment to excellence, integrity, and innovation.
             </p>
             <p className="text-sm text-[#2014FF]">
               <span className="font-semibold ">Email:</span>{" "}

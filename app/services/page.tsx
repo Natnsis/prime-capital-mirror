@@ -11,7 +11,7 @@ import {
   BriefcaseIcon,
   FileTextIcon,
   Lightbulb,
-  Disc2,
+  Target,
 } from "lucide-react";
 
 const services = [
@@ -41,7 +41,7 @@ const services = [
     desc: "Tailored strategic consulting services to help businesses navigate complex market dynamics and achieve sustainable growth.",
   },
   {
-    icon: <Disc2 size={28} />,
+    icon: <Target size={28} />,
     title: "Valuation Services",
     desc: "Comprehensive business and asset valuation services using industry-leading methodologies and market analysis.",
   },
@@ -86,7 +86,6 @@ const differentiators = [
 export default function Services() {
   return (
     <main className="min-h-screen w-full bg-white  text-gray-900">
-       
       <Hero2
         title="Our Services"
         description="Comprehensive Investment Banking and Advisory Solutions"
@@ -107,7 +106,7 @@ export default function Services() {
               key={i}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative overflow-hidden p-6 bg-white/90 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 items-center bg-cover bg-center bg-no-repeat"
+              className="relative overflow-hidden p-6 bg-white/90 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 items-center hover:border-[#0E0066] bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: "url(/back-grid.jpg)" }}
             >
               <div className="text-white mx-auto mb-4 bg-linear-to-br from-[#0E0066] to-[#2014FF] w-fit p-2 rounded-full items-center">
@@ -138,7 +137,7 @@ export default function Services() {
             <motion.div
               key={i}
               whileHover={{ scale: 1.01 }}
-              className="group bg-white  border border-gray-200  rounded-xl p-6 flex flex-col sm:flex-row gap-4 items-start drop-shadow-lg"
+              className="group bg-white  border border-gray-200  rounded-xl p-6 flex flex-col sm:flex-row gap-4 items-start drop-shadow-lg hover:border-[#0E0066]"
             >
               <div className="shrink-0 h-10 w-10 rounded-full bg-[#2014FF] group-hover:bg-primary text-white flex items-center justify-center font-bold">
                 {step.step}
@@ -157,7 +156,7 @@ export default function Services() {
       </section>
 
       {/* Why Clients Choose */}
-  <section className="py-20 px-6 md:px-12 bg-linear-to-br from-[#0E0066] to-[#2014FF] text-white text-center">
+      <section className="py-20 px-6 md:px-12 bg-linear-to-br from-[#0E0066] to-[#2014FF] text-white text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">
           Why Clients Choose Prime Capital
         </h2>
@@ -186,8 +185,10 @@ export default function Services() {
 
       {/* CTA */}
       <section className="py-16 px-6 md:px-12 text-center">
-        <div className="relative overflow-hidden max-w-3xl mx-auto bg-white/90 rounded-2xl p-10 border border-[#DAD9F280] shadow drop-shadow-xl bg-cover bg-center bg-no-repeat"
-             style={{ backgroundImage: "url(/back-grid.jpg)" }}>
+        <div
+          className="relative overflow-hidden max-w-3xl mx-auto bg-white/90 rounded-2xl p-10 border border-[#DAD9F280] shadow drop-shadow-xl bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url(/back-grid.jpg)" }}
+        >
           <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-[#0E0066]">
             Partner with Prime Capital to Shape Ethiopia&apos;s Capital Market
             Future
