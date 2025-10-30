@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
-    <section className=" min-h-screen w-full overflow-hidden  flex flex-col">
+    <section className="relative isolate min-h-screen w-full overflow-hidden  flex flex-col">
       {/* Main Background */}
       <div
         className="absolute -z-10 bg-[url('/herobg.png')] bg-cover bg-center mt-0 opacity-30 pointer-events-none"

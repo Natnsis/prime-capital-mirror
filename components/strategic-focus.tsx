@@ -49,7 +49,7 @@ export default function SignatureStrengths() {
               className="relative overflow-hidden rounded-2xl border border-white/20 bg-white/10 
                          backdrop-blur-xl shadow-[0_4px_25px_rgba(20,28,255,0.15)] 
                          hover:shadow-[0_8px_35px_rgba(20,28,255,0.25)] 
-                         p-6 text-left transition-all duration-300 hover:-translate-y-1 bg-cover bg-center bg-no-repeat hover:border-[#0E0066]"
+                         p-6 text-left transition-all duration-300 hover:-translate-y-1 bg-cover bg-center bg-no-repeat "
               style={{ backgroundImage: "url(/back-grid.jpg)" }}
             >
               {/* Glow gradient ring */}

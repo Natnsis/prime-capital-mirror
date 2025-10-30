@@ -106,7 +106,7 @@ export default function Services() {
               key={i}
               whileHover={{ y: -6, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative overflow-hidden p-6 bg-white/90 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 items-center hover:border-[#0E0066] bg-cover bg-center bg-no-repeat"
+              className="relative overflow-hidden p-6 bg-white/90 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 items-center bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: "url(/back-grid.jpg)" }}
             >
               <div className="text-white mx-auto mb-4 bg-linear-to-br from-[#0E0066] to-[#2014FF] w-fit p-2 rounded-full items-center">

@@ -1,7 +1,8 @@
 "use client";
 
 import Hero2 from "@/components/Hero2";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 import {
   Target,
   Shield,
@@ -23,9 +24,20 @@ import {
   Sliders,
 } from "lucide-react";
 import { FaTiktok, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
-
+import MemberModal from "@/components/Member";
+import { useState } from "react";
+type SocialLink = { platform: string; url: string };
+type BoardMember = {
+  name: string;
+  role: string;
+  edu: string;
+  img: string;
+  socialLinks?: SocialLink[];
+  qualifications?: string;
+  occupation?: string;
+  bio?: string;
+};
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
-
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   whileInView: { opacity: 1, y: 0 },
@@ -109,35 +121,41 @@ const strategicContext = [
 
 const boardMembers = [
   {
-    name: "Board Member 1",
+    name: "Mukemil Bedru",
     role: "Board Chairperson",
     edu: "MBA • BSc",
-    img: "./team.png",
+    img: "./mukemil.png",
     socialLinks: [
       { platform: "linkedin", url: "https://linkedin.com/in/mukemilbedru" },
       { platform: "telegram", url: "https://t.me/mukemilbedru" },
     ],
+    qualifications: "MBA (AAU), BA in Management (Haramaya University)",
+    occupation: "Managing Partner, Elegance Group",
+    bio: "17+ years in consulting, finance, and governance. Former Chair, Hijra Bank. Expertise in corporate strategy and financial sector leadership.",
   },
   {
-    name: "Board Member 2",
-    role: "Deputy Chairperson",
+    name: "Tewdros M. Delelgn",
+    role: "D/Board Chairman",
     edu: "MBA • BA",
-    img: "./team.png",
+    img: "./tewdros.png",
     socialLinks: [{ platform: "twitter", url: "https://twitter.com/tewodros" }],
+    qualifications: "MBA (AAU), BA in Management (Haramaya University)",
+    occupation: "Managing Partner, Elegance Group",
+    bio: "17+ years in consulting, finance, and governance. Former Chair, Hijra Bank. Brings extensive expertise in corporate strategy and financial sector leadership.",
   },
   {
-    name: "Board Member 3",
-    role: "Board Director",
+    name: "Habib Mohammed",
+    role: "Executive Board Director",
     edu: "MSc • BSc",
-    img: "./team.png",
+    img: "./habib.png",
     socialLinks: [
       { platform: "linkedin", url: "https://linkedin.com/in/mukemilbedru" },
       { platform: "email", url: "mailto:mukemil@primecapital.com" },
     ],
   },
   {
-    name: "Mukemil Bedru",
-    role: "Board Chairperson",
+    name: "Leake Melaku",
+    role: "Board Director",
     edu: "MBA (AAU), BA in Management (Haramaya University)",
     img: "./team.png",
     socialLinks: [
@@ -146,10 +164,24 @@ const boardMembers = [
     ],
   },
   {
-    name: "Tewodros Dulelegn",
-    role: "Deputy Chairperson",
+    name: "Kalkidan Niguse",
+    role: "Board Director",
     edu: "MBA, BA in Management",
-    img: "./team.png",
+    img: "./kalkidan.png",
+    socialLinks: [{ platform: "twitter", url: "https://twitter.com/tewodros" }],
+  },
+  {
+    name: "Banteyrga Kebede",
+    role: "Board Director",
+    edu: "MBA, BA in Management",
+    img: "./banteyrga.png",
+    socialLinks: [{ platform: "twitter", url: "https://twitter.com/tewodros" }],
+  },
+  {
+    name: "Behailu Aregahgn",
+    role: "Board Secretary",
+    edu: "MBA, BA in Management",
+    img: "./behailu.png",
     socialLinks: [{ platform: "twitter", url: "https://twitter.com/tewodros" }],
   },
 ];
@@ -172,30 +204,10 @@ const execMembers = [
   },
   {
     name: "Frezer Ayele",
-    role: "Chief Compliance Officer",
+    role: "Chief Compliant Officer",
     edu: "MBA (General Management), BA (Business Management)",
     socialLinks: [
       { platform: "linkedin", url: "https://linkedin.com/in/executive2" },
-      { platform: "email", url: "mailto:executive2@primecapital.com" },
-    ],
-  },
-  {
-    name: "Yonas Alemayehu",
-    role: "Chief Technology Officer",
-    edu: "MBA (Project Management), BSc (Electrical Engineering)",
-    socialLinks: [
-      { platform: "linkedin", url: "https://linkedin.com/in/executive2" },
-      { platform: "twitter", url: "" },
-      { platform: "email", url: "mailto:executive2@primecapital.com" },
-    ],
-  },
-  {
-    name: "Almaz Tekle",
-    role: "Chief Financial Officer",
-    edu: "CPA, MBA (Finance), BA (Accounting)",
-    socialLinks: [
-      { platform: "linkedin", url: "https://linkedin.com/in/executive2" },
-      { platform: "twitter", url: "" },
       { platform: "email", url: "mailto:executive2@primecapital.com" },
     ],
   },
@@ -227,6 +239,8 @@ const getPlatformIcon = (platform: string) => {
 };
 
 export default function About() {
+  const [selected, setSelected] = useState<BoardMember | null>(null);
+
   return (
     <main className="min-h-screen w-full bg-white text-gray-900">
       <Hero2
@@ -503,7 +517,7 @@ export default function About() {
 
         <motion.div
           {...staggerContainer}
-          className="mt-10 grid gap-8 md:grid-cols-2 sm:grid-cols-1 max-w-5xl mx-auto"
+          className="mt-10 grid gap-8 md:grid-cols-3 sm:grid-cols-1 max-w-5xl mx-auto"
         >
           {boardMembers.map((m, i) => (
             <motion.div
@@ -511,18 +525,19 @@ export default function About() {
               variants={fadeInUp}
               whileHover={{ y: -4, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl overflow-hidden flex flex-col hover:border-[#0E0066]"
+              onClick={() => setSelected(m)}
+              className="cursor-pointer bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl overflow-hidden flex flex-col hover:border-[#0E0066]"
             >
               {/* Image */}
               <div className="relative w-full h-56 overflow-hidden">
                 <img
                   src={m.img}
                   alt={m.name}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="w-full h-full object-fill transition-transform duration-500 hover:scale-105"
                 />
               </div>
 
-              <div className="p-5 flex flex-col justify-between">
+              <div className="p-3 flex flex-col justify-between">
                 <div>
                   <h3 className="font-semibold text-[#0E0066] text-lg">
                     {m.name}
@@ -533,26 +548,22 @@ export default function About() {
                   <p className="text-[13px] text-[#504785] mt-2">{m.edu}</p>
                 </div>
 
-                <div className="border-t border-gray-200 mt-4 mb-3"></div>
+                <div className="border-t border-gray-200 mt-2 mb-1"></div>
 
-                {/* Social Links (conditionally rendered) */}
                 {m.socialLinks && m.socialLinks.length > 0 && (
                   <div className="flex gap-3 mt-2">
-                    {m.socialLinks.map(
-                      (link: { platform: string; url: string }) => {
-                        const icon = getPlatformIcon(link.platform);
-                        if (!icon) return null;
-                        return (
-                          <button
-                            key={link.platform}
-                            onClick={() => window.open(link.url, "_blank")}
-                            className="p-2 bg-[#EEF2FF] text-[#0E0066] rounded-full hover:bg-[#0E0066] hover:text-white transition"
-                          >
-                            {icon}
-                          </button>
-                        );
-                      }
-                    )}
+                    {m.socialLinks.map((link) => (
+                      <button
+                        key={link.platform}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(link.url, "_blank", "noopener");
+                        }}
+                        className="p-2 bg-[#EEF2FF] text-[#0E0066] rounded-full hover:bg-[#0E0066] hover:text-white transition"
+                      >
+                        {getPlatformIcon(link.platform)}
+                      </button>
+                    ))}
                   </div>
                 )}
               </div>
@@ -689,6 +700,11 @@ export default function About() {
           </motion.div>
         </motion.div>
       </section>
+      <MemberModal
+        open={!!selected}
+        member={selected}
+        onClose={() => setSelected(null)}
+      />
     </main>
   );
 }
