@@ -58,7 +58,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
+      className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
       onClick={onClose}
     >
       <div
@@ -68,7 +68,7 @@ const Lightbox: React.FC<LightboxProps> = ({
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 z-10 p-2 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-70 transition-colors"
+          className="absolute top-2 right-2 z-10 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
           aria-label="Close lightbox"
         >
           <X className="w-6 h-6" />
@@ -82,7 +82,7 @@ const Lightbox: React.FC<LightboxProps> = ({
                 e.stopPropagation();
                 onChange(index > 0 ? index - 1 : images.length - 1);
               }}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-70 transition-colors"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -92,7 +92,7 @@ const Lightbox: React.FC<LightboxProps> = ({
                 e.stopPropagation();
                 onChange(index < images.length - 1 ? index + 1 : 0);
               }}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-70 transition-colors"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6" />
@@ -114,7 +114,7 @@ const Lightbox: React.FC<LightboxProps> = ({
 
         {/* Image counter */}
         {images.length > 1 && (
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 px-3 py-1 bg-black bg-opacity-50 text-white text-sm rounded-full">
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 px-3 py-1 bg-black/50 text-white text-sm rounded-full">
             {index + 1} / {images.length}
           </div>
         )}
