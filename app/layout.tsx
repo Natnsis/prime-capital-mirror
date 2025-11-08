@@ -6,7 +6,7 @@ import SplashLayout from "@/components/SplashLayout";
 
 export const metadata: Metadata = {
   title: "Prime Capital - Investment Bank",
-  description: "",
+  description: "Drive Ethiopia's capital market development",
   icons: {
     icon: '/logoblack.png',
   },
