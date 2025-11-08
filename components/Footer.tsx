@@ -16,8 +16,8 @@ export default function Footer() {
   return (
     <footer className="relative w-full text-white">
       <div className="bg-gradient-to-b from-secondary to-[#1a259d]">
-        <div className="py-12">
-          <div className="mx-auto max-w-7xl px-6 py-12 grid grid-cols-1 sm:grid-cols-4 gap-8">
+        <div className="py-4">
+          <div className="mx-auto max-w-7xl px-6 py-6 grid grid-cols-1 sm:grid-cols-4 gap-8">
             <div className="flex flex-col gap-4">
               <div className="pl-4 flex items-center text-white font-semibold text-lg select-none">
                 <Link href="/">
@@ -119,14 +119,14 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full h-[1px] bg-white/20 mt-8"></div>
+          <div className="w-full h-[1px] bg-white/20 mt-2"></div>
         </div>
       </div>
 
       {/* Bottom section */}
       <div className="bg-[#1a259d]">
         <div className="">
-          <div className="mx-auto max-w-7xl px-6 pb-8 flex flex-col sm:flex-row justify-between items-center text-xs">
+          <div className="mx-auto max-w-7xl px-6 pb-2 flex flex-col sm:flex-row justify-between items-center text-xs">
             <p className="bg-gradient-to-r from-white/70 to-accent bg-clip-text text-transparent">
               © {new Date().getFullYear()} Prime Capital S.C. — All Rights
               Reserved
@@ -163,8 +163,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          <div className="h-10 sm:h-10"></div>
         </div>
       </div>
     </footer>

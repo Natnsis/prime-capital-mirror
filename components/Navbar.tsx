@@ -1,18 +1,38 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { useEffect, useState, useRef } from "react";
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const closeTimeout = useRef<number | null>(null);
 
-  // Elevate and subtly animate the navbar when the page is scrolled
+  const handleOpen = () => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+      closeTimeout.current = null;
+    }
+    setDropdownOpen(true);
+  };
+
+  const handleClose = () => {
+    if (closeTimeout.current) {
+      clearTimeout(closeTimeout.current);
+    }
+    // slight delay to allow user to move into the dropdown without it vanishing
+    closeTimeout.current = window.setTimeout(() => {
+      setDropdownOpen(false);
+      closeTimeout.current = null;
+    }, 120);
+  };
+
+  // Add sticky behavior and shadow when scrolled
   useEffect(() => {
     const onScroll = () => {
-      // small threshold to trigger the floating state
-      setScrolled(window.scrollY > 8);
+      setScrolled(window.scrollY > 10);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -20,20 +40,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full">
-  <div className="w-[95%] max-w-6xl mx-auto p-1.5">
-        <nav
-          className={`relative w-full rounded-xl transition-all duration-300 ease-out
-                     ${scrolled
-                       ? "bg-linear-to-r from-accent/90 to-primary/95 shadow-[0_10px_30px_rgba(0,0,0,0.35)] ring-1 ring-white/10 backdrop-blur-2xl"
-                       : "bg-linear-to-r from-accent/85 to-primary shadow-[0_0_25px_rgba(0,0,0,0.3)] backdrop-blur-2xl"}
-                     transform ${scrolled ? "scale-100" : "scale-[0.995]"}
-                     flex items-center justify-between px-4 sm:px-6 py-3`}
-        >
+  <header className={`w-full ${scrolled ? 'sticky top-0 shadow-2xl' : ''} z-50 relative isolate`}>
+    <nav className={`w-full bg-linear-to-br from-[#01016F] via-[#141CFF] to-[#2014FF] backdrop-blur-2xl px-6 md:px-10 lg:px-16 py-3 flex items-center justify-between transition-shadow duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
+        
           <div className="flex items-center gap-3">
             <Link href="#">
               <Image
-                src="/logo.png"
+                src="/logoblack.png"
                 alt="Logo"
                 width={150}
                 height={40}
@@ -66,14 +79,47 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link href="/vacancy" className="hover:text-white transition-colors">
-                  Jobs
+                <Link href="/our-team" className="hover:text-white transition-colors">
+                  Our Team
                 </Link>
               </li>
-              <li>
-                <Link href="/news" className="hover:text-white transition-colors">
-                  Blogs
-                </Link>
+              <li
+                className="relative"
+                onMouseEnter={handleOpen}
+                onMouseLeave={handleClose}
+              >
+                <div className="flex items-center gap-1 hover:text-white transition-colors cursor-pointer select-none">
+                  News and Resources
+                  <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`} />
+                </div>
+                {dropdownOpen && (
+                  <div className="absolute top-full right-0 mt-2 w-64 bg-linear-to-br from-primary/80 to-secondary/80 backdrop-blur-lg rounded-md shadow-lg py-2 z-50 animate-in fade-in slide-in-from-top-1">
+                    <Link
+                      href="/news"
+                      className="block px-4 py-3 hover:bg-white/10 transition-colors"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <div className="font-medium text-white">Blog</div>
+                      <p className="text-sm text-white/80 leading-snug">Stay updated with our latest articles and News and Resources.</p>
+                    </Link>
+                    <Link
+                      href="/listed-companies"
+                      className="block px-4 py-3 hover:bg-white/10 transition-colors"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <div className="font-medium text-white">ESX Listed Companies</div>
+                      <p className="text-sm text-white/80 leading-snug">Explore companies listed on the Ethiopian Securities Exchange.</p>
+                    </Link>
+                    <Link
+                      href="/vacancy"
+                      className="block px-4 py-3 hover:bg-white/10 transition-colors"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <div className="font-medium text-white">Jobs</div>
+                      <p className="text-sm text-white/80 leading-snug">Explore open positions and join our team.</p>
+                    </Link>
+                  </div>
+                )}
               </li>
               {/* <li>
               <Link
@@ -128,17 +174,48 @@ export default function Navbar() {
               Services
             </Link>
             <Link
-              href="/vacancy"
+              href="/our-team"
               className=" font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
             >
-              Jobs
+              Our Team
             </Link>
-            <Link
-              href="/news"
-              className=" font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
-            >
-              Blogs
-            </Link>
+            <div className="flex flex-col">
+              <button
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="flex items-center justify-between font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
+              >
+                News and Resources
+                <ChevronDownIcon className="w-4 h-4" />
+              </button>
+              {dropdownOpen && (
+                <div className="ml-4 flex flex-col space-y-1">
+                  <Link
+                    href="/news"
+                    className="font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <div>Blog</div>
+                    <p className="text-sm text-gray-600">Stay updated with our latest articles and Insights.</p>
+                  </Link>
+                  <Link
+                    href="/listed-companies"
+                    className="font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <div>ESX Listed Companies</div>
+                    <p className="text-sm text-gray-600">Explore companies listed on the Ethiopian Securities Exchange.</p>
+                  </Link>
+                  <Link
+                    href="/vacancy/jobs"
+                    className="font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    <div>Jobs</div>
+                    <p className="text-sm text-gray-600">Explore open positions and join our team.</p>
+                  </Link>
+                </div>
+              )}
+            </div>
             {/* <Link
               href="/contact"
               className=" font-semibold py-1 px-2 rounded hover:bg-white/10 transition"
@@ -153,7 +230,6 @@ export default function Navbar() {
             </Link>
           </div>
         )}
-      </div>
     </header>
   );
 }

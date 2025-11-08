@@ -25,8 +25,9 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
-import { MapPin, Briefcase, AlertCircle } from "lucide-react"
+import { MapPin, Briefcase, AlertCircle, ArrowLeft } from "lucide-react"
 import { Skeleton } from "@/components/ui/skeleton"
+import Link from "next/link"
 
 interface Job {
   id:string
@@ -208,6 +209,14 @@ export function JobOpportunities() {
       <div className="pointer-events-none absolute inset-0 bg-[url('/back-grid.jpg')] opacity-5 bg-cover bg-center" />
 
       <div className="relative max-w-7xl mx-auto">
+      <div className="pb-6">
+                <Button asChild className="px-3 py-2 bg-white/90 text-[#0E0066] hover:bg-white">
+          <Link href="/vacancy" aria-label="Back to vacancies" className="flex items-center gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back
+          </Link>
+        </Button>
+      </div>
         {/* Heading + Filters - blue card */}
         <div className="mb-8 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0E0066]">Job Opportunities</h2>

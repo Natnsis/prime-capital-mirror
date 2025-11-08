@@ -1,7 +1,7 @@
 "use client";
 
-import Hero2 from "../../components/Hero2";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Briefcase,
   Building2,
@@ -86,11 +86,6 @@ const differentiators = [
 export default function Services() {
   return (
     <main className="min-h-screen w-full bg-white  text-gray-900">
-      <Hero2
-        title="Our Services"
-        description="Comprehensive Investment Banking and Advisory Solutions"
-      />
-
       {/* What We Offer */}
       <section className="py-20 px-6 md:px-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#0E0066]">
@@ -198,12 +193,16 @@ export default function Services() {
             objectives and drive sustainable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-6 py-2 bg-linear-to-r from-[#0E0066] to-[#2014FF] text-white rounded-full  hover:scale-105 transition transform duration-200 ease-in-out">
-              Contact Us
-            </button>
-            <button className="px-6 py-2 border border-[#0E0066] text-[#0E0066] rounded-full   hover:scale-105 transition transform duration-200 ease-in-out">
-              Learn More
-            </button>
+            <Link href="/contact-us">
+              <button className="cursor-pointer px-6 py-2 bg-linear-to-r from-[#0E0066] to-[#2014FF] text-white rounded-full  hover:scale-105 transition transform duration-200 ease-in-out">
+                Contact Us
+              </button>
+            </Link>
+            <Link href="/services">
+              <button className="cursor-pointer px-6 py-2 border border-[#0E0066] text-[#0E0066] rounded-full   hover:scale-105 transition transform duration-200 ease-in-out">
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
       </section>

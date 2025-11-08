@@ -124,3 +124,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Waving hand animation used on the vacancy page */
+.wave {
+  display: inline-block;
+  transform-origin: 60% 60%;
+  -webkit-transform-origin: 60% 60%;
+  animation: wave 2000ms ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wave { animation: none; }
+}
