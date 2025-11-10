@@ -174,7 +174,7 @@ const execMembers: MemberType[] = [
   },
   {
     name: "Yonas Alemayehu",
-    role: "CTO (Chief Technology Officer)",
+    role: "Chief Technology Officer",
     edu: "",
     img: "/yonas.jpg",
     education: [

@@ -70,10 +70,6 @@ const NewsDetailPage = () => {
         <article>
           <div className="flex items-center justify-between mb-2">
             <h1 className="text-3xl md:text-4xl font-bold mb-4 lg:basis-4/5 text-primary">{blog.title.en}</h1>
-            <div className="hidden lg:flex lg:flex-col px-8 items-center border border-muted rounded-full bg-muted shadow-sm w-fit gap-4">
-              <p className="text-sm text-primary font-medium translate-y-5">Author</p>
-              <Image src={logo} alt="Yehulu Logo" className="w-20 h-10" />
-            </div>
           </div>
           <div className="text-sm text-muted-foreground mb-6">
             {new Date(blog.createdAt).toLocaleString()}

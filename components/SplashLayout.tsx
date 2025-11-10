@@ -43,8 +43,8 @@ export default function SplashLayout({
           <Image
             src="/logo.png"
             alt="Prime Capital logo"
-            width={200}
-            height={80}
+            width={300}
+            height={120}
             priority
             className="sparkle-logo"
           />
