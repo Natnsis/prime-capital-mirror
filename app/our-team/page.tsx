@@ -36,7 +36,7 @@ const boardMembers: MemberType[] = [
     name: "Mukemil Bedru",
     role: "Board Chairperson",
     edu: "MBA, BA in Management",
-    img: "/mukemil.png",
+    img: "/muk.jpg",
     education: [
       "MBA — Addis Ababa University",
       "BA in Management — Haramaya University",
@@ -56,7 +56,7 @@ const boardMembers: MemberType[] = [
     name: "Tewodros M. Delelegn",
     role: "V/Board Chairperson",
     edu: "MSc in Telecom Business Administration, BA in Management",
-    img: "/tewdros.png",
+    img: "/tewodros.jpg",
     education: [
       "MSc in Telecom Business Administration — Addis Ababa University",
       "BA in Management — Addis Ababa University"
@@ -75,7 +75,7 @@ const boardMembers: MemberType[] = [
     name: "Habib Mohammed",
     role: "Board Member",
     edu: "MBA in International Business, BA in Accounting",
-    img: "/habib.png",
+    img: "/habib.jpg",
     education: [  
       "MBA in International Business — University of Greenwich (UK)",
       "BA in Accounting — Jimma University",
@@ -93,7 +93,7 @@ const boardMembers: MemberType[] = [
     name: "Behailu Aregahgn",
     role: "Board Member",
     edu: "MBA in International Business, BA in Economics",
-    img: "/behailu.jpg",
+    img: "/behailu2.jpg",
     education: [
       "MBA in International Business — Mekelle University",
       "BA in Economics — Debub University",
@@ -111,7 +111,7 @@ const boardMembers: MemberType[] = [
     name: "Kalkidan Nigusse",
     role: "Board Member",
     edu: "Master’s in Marketing Management, Master’s in Development Management, BA in Economics",
-    img: "/kalkidan.png",
+    img: "/kalidan.jpg",
     education: [
       "Master’s in Marketing Management — Addis Ababa University",
       "Master’s in Development Management — University of Torino (ITC, Italy)",
@@ -132,7 +132,7 @@ const boardMembers: MemberType[] = [
     name: "Banteyrga Kebede",
     role: "Board Member",
     edu: "MBA in Telecom Business Administration, BA in Management",
-    img: "/banteyrga.png",
+    img: "/banteyerga.jpg",
     education: [
       "MBA in Telecom Business Administration",
       "BA in Management",
@@ -153,7 +153,7 @@ const execMembers: MemberType[] = [
     name: "Habib Mohammed",
     role: "Chief Executive Officer",
     edu: "MBA in International Business, BA in Accounting, FCCA, CISI",
-    img: "/habib.png",
+    img: "/habib2.jpg",
     education: [
       "MBA in International Business — University of Greenwich (UK)",
       "BA in Accounting — Jimma University",
@@ -174,7 +174,7 @@ const execMembers: MemberType[] = [
     name: "Haileleul Kassa",
     role: "Chief Risk and Compliance Officer",
     edu: "MSc in International Business, BA in Economics",
-    img: "/haileleul.jpg",
+    img: "/haile.jpg",
     education: [
       "MSc in International Business",
       "BA in Economics",
@@ -407,7 +407,7 @@ export default function OurTeamPage() {
           className="max-w-5xl mx-auto mt-10 rounded-2xl overflow-hidden shadow-lg"
         >
           <Image
-            src="/grouppic.jpg"
+            src="/team-photo.jpg"
             alt="Executive Team"
             width={1600}
             height={600}

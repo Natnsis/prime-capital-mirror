@@ -41,7 +41,7 @@ export default function Navbar() {
 
   return (
   <header className="w-full sticky top-0 z-50 isolate">
-    <nav className={`w-full bg-linear-to-br from-[#01016F] via-[#141CFF] to-[#2014FF] backdrop-blur-2xl px-6 md:px-10 lg:px-16 py-3 flex items-center justify-between transition-shadow duration-300 ${scrolled ? 'shadow-lg' : 'shadow-none'}`}>
+    <nav className={`w-full bg-linear-to-b from-[#01016F] to-[#2014FF] backdrop-blur-2xl px-6 md:px-10 lg:px-16 py-3 flex items-center justify-between transition-shadow duration-300 ${scrolled ? 'shadow-lg' : 'shadow-none'}`}>
         
           <div className="flex items-center gap-3">
             <Link href="/">
