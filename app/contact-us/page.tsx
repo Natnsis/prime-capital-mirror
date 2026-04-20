@@ -11,9 +11,9 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
           {/* Left: Get in Touch as text (no cards) */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#0E0066]">Let's Connect</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#0E0066]">Let&apos;s Connect</h2>
             <p className="text-[#504785] mb-8">
-              We'd love to help you start exceeding your goals. Reach us using the details below.
+              Weapos;d love to help you start exceeding your goals. Reach us using the details below.
             </p>
 
             <ul className="space-y-5">
