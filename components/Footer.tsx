@@ -99,7 +99,7 @@ export default function Footer() {
                   <div className="p-2 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent/20 transition">
                     <FaMapMarkerAlt className="text-accent text-base" />
                   </div>
-                  <span>Yeka Sub-City, Woreda 07, Addis Ababa, Ethiopia</span>
+                  <span>Bole Sub-City, Woreda 02, Addis Ababa, Ethiopia</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="p-2 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent/20 transition">
@@ -113,7 +113,7 @@ export default function Footer() {
                   <div className="p-2 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent/20 transition">
                     <FaPhone className="text-accent text-base" />
                   </div>
-                  <span>+251-111-137070</span>
+                  <span>6309</span>
                 </li>
               </ul>
             </div>

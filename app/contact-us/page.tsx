@@ -21,7 +21,7 @@ export default function Contact() {
                 <span className="mt-1 text-[#2014FF]"><MapPin size={20} /></span>
                 <div>
                   <div className="font-semibold text-[#0E0066]">Visit Us</div>
-                  <p className="text-sm text-[#504785]">Yeka Sub-City, Woreda 07<br/>Addis Ababa, Ethiopia</p>
+                  <p className="text-sm text-[#504785]">Bole Sub-City, Woreda 02<br/>Addis Ababa, Ethiopia</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -35,7 +35,7 @@ export default function Contact() {
                 <span className="mt-1 text-[#2014FF]"><Phone size={20} /></span>
                 <div>
                   <div className="font-semibold text-[#0E0066]">Call Us</div>
-                  <a href="tel:+251 (0)91122 2911" className="text-sm text-[#504785] hover:underline">+251-111-137070</a>
+                  <a href="tel:+251 (0)91122 2911" className="text-sm text-[#504785] hover:underline">6309</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
