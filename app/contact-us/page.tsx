@@ -1,84 +1,67 @@
 "use client";
 
-import Hero2 from "../../components/Hero2";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen w-full bg-white  text-gray-900 ">
-      <Hero2
-        title="Let's Connect"
-        description="We're here to guide your next investment journey"
-      />
+    <main className="min-h-screen w-full bg-white text-gray-900 ">
+      {/* Top: Get in touch text list + Map side by side */}
+      <section className="py-10 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+          {/* Left: Get in Touch as text (no cards) */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-[#0E0066]">Let&apos;s Connect</h2>
+            <p className="text-[#504785] mb-8">
+              Weapos;d love to help you start exceeding your goals. Reach us using the details below.
+            </p>
 
-      {/* Get in Touch */}
-      <section className="py-16 px-6 md:px-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0E0066]">
-          Get in Touch
-        </h2>
-        <p className="text-[#0E0066] mb-10 ">
-          Whether you’re looking for investment banking services or strategic
-          advisory, our team is ready to help you succeed.
-        </p>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-          {[
-            {
-              icon: <MapPin size={22} />,
-              title: "Visit Us",
-              line1: "Kirkos Sub-City, Woreda 08",
-              line2: "Addis Ababa, Ethiopia",
-            },
-            {
-              icon: <Mail size={22} />,
-              title: "Email Us",
-              line1: "info@primecapital.com",
-              href: "mailto:info@primecapital.com",
-            },
-            {
-              icon: <Phone size={22} />,
-              title: "Call Us",
-              line1: "+251 11 XXX XXXX",
-              href: "tel:+251110000000",
-            },
-            {
-              icon: <Clock size={22} />,
-              title: "Business Hours",
-              line1: "Monday - Friday",
-              line2: "8:30 AM - 5:30 PM EAT",
-            },
-          ].map((c, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ y: -6, scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="relative overflow-hidden group p-6 bg-white/90 rounded-2xl shadow-md hover:shadow-xl border border-gray-200 bg-cover bg-center bg-no-repeat "
-              style={{ backgroundImage: "url(/back-grid.jpg)" }}
-            >
-              <div className="mb-4 mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full text-white bg-linear-to-br from-[#0E0066] to-[#2014FF] shadow-sm transition-transform group-hover:scale-105">
-                {c.icon}
-              </div>
-              <div className="font-semibold text-[#0E0066]">{c.title}</div>
-              {c.href ? (
-                <a
-                  href={c.href}
-                  className="mt-2 block text-sm text-[#504785] hover:underline wrap-break-word"
-                >
-                  {c.line1}
-                </a>
-              ) : (
-                <div className="mt-2 text-sm text-[#504785]">
-                  {c.line1}
-                  {c.line2 ? <div>{c.line2}</div> : null}
+            <ul className="space-y-5">
+              <li className="flex items-start gap-3">
+                <span className="mt-1 text-[#2014FF]"><MapPin size={20} /></span>
+                <div>
+                  <div className="font-semibold text-[#0E0066]">Visit Us</div>
+                  <p className="text-sm text-[#504785]">Bole Sub-City, Woreda 02<br/>Addis Ababa, Ethiopia</p>
                 </div>
-              )}
-            </motion.div>
-          ))}
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 text-[#2014FF]"><Mail size={20} /></span>
+                <div>
+                  <div className="font-semibold text-[#0E0066]">Email Us</div>
+                  <a href="mailto:Info@primecapitalsc.com" className="text-sm text-[#504785] hover:underline">Info@primecapitalsc.com</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 text-[#2014FF]"><Phone size={20} /></span>
+                <div>
+                  <div className="font-semibold text-[#0E0066]">Call Us</div>
+                  <a href="tel:+251 (0)91122 2911" className="text-sm text-[#504785] hover:underline">6309</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1 text-[#2014FF]"><Clock size={20} /></span>
+                <div>
+                  <div className="font-semibold text-[#0E0066]">Business Hours</div>
+                  <p className="text-sm text-[#504785]">Monday - Friday<br/>8:30 AM - 5:30 PM EAT</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right: Map embed */}
+          <div className="w-full h-[420px] rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+            <iframe
+              title="Prime Capital Location"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=38.7468%2C9.0054%2C38.7578%2C9.0154&layer=mapnik"
+              className="w-full h-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </section>
 
-      {/* Inquiry and Careers */}
+      {/* Bottom: two cards */}
       <section className="py-10 px-6 md:px-12">
         <div className="grid gap-6 md:grid-cols-2 max-w-6xl mx-auto">
           <motion.div
@@ -98,9 +81,9 @@ export default function Contact() {
               <span className="font-semibold ">Email:</span>{" "}
               <a
                 className=" hover:underline"
-                href="mailto:info@primecapital.com"
+                href="mailto:Info@primecapitalsc.com"
               >
-                info@primecapital.com
+                Info@primecapitalsc.com
               </a>
             </p>
           </motion.div>
@@ -125,38 +108,16 @@ export default function Contact() {
               <span className="font-semibold ">Email:</span>{" "}
               <a
                 className="hover:underline"
-                href="mailto:careers@primecapital.com"
+                href="mailto:Info@primecapitalsc.com"
               >
-                careers@primecapital.com
+                Info@primecapitalsc.com
               </a>
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Location */}
-      <section className="py-16 px-6 md:px-12 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#0E0066]">
-          Our Location
-        </h2>
-        <p className="text-[#504785] mb-10">
-          Find us in the heart of Addis Ababa
-        </p>
-
-        <motion.div
-          whileHover={{ y: -4, scale: 1.01 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className="max-w-5xl mx-auto rounded-2xl p-10 bg-[#1B16FF1A]/70 border border-gray-200 shadow h-[400px] items-center justify-center flex flex-col"
-        >
-          <div className="mb-4 mx-auto inline-flex h-12 w-12 items-center justify-center text-[#0E0066]">
-            <MapPin size={32} />
-          </div>
-          <div className="font-semibold text-[#0E0066] mb-2">
-            Kirkos Sub-City, Woreda 08
-          </div>
-          <div className="text-sm text-[#504785]">Addis Ababa, Ethiopia</div>
-        </motion.div>
-      </section>
+      {/* Removed separate 'Location' section since map is now beside the contact details */}
     </main>
   );
 }

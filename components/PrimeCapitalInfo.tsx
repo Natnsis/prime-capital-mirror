@@ -1,7 +1,12 @@
 "use client";
+import dynamic from 'next/dynamic'
+import animatedBusiness from '@/components/animated-icons/business.json'
 
-import React from "react";
 
+const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then(mod => mod.Player), {
+  ssr: false,
+  loading: () => <div className="w-[100px] h-[100px] bg-gray-200 dark:bg-gray-700 rounded-full animate-pulse"></div>
+})
 export default function PrimeCapitalInfo() {
   return (
     <section className="w-full bg-white py-16">
@@ -32,13 +37,14 @@ export default function PrimeCapitalInfo() {
           </p>
         </div>
 
-        <div className="flex-shrink-0 relative w-full md:w-[380px] lg:w-[450px] flex justify-center">
-          <div className="w-full h-64 md:h-80 bg-white transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out overflow-hidden">
-            <img
+        <div className="flex-shrink-0 relative w-full md:w-[380px] lg:w-[400px] flex justify-center">
+          <div className="w-full h-64 md:h-80 bg-white ease-out overflow-hidden">
+            {/* <img
               src="/home.png"
               alt="Prime Capital Building"
               className="w-full h-full object-cover"
-            />
+            /> */}
+            <Player autoplay loop src={animatedBusiness} className="absolute inset-0 w-full h-full" />
           </div>
         </div>
       </div>
