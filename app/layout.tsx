@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { Providers } from "@/wrappers/providers";
 import SplashLayout from "@/components/SplashLayout";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Prime Capital - Investment Bank",
@@ -29,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-primary text-white min-h-screen `}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} bg-primary text-white min-h-screen `}>
         <Providers>
           <SplashLayout>{children}</SplashLayout>
         </Providers>
