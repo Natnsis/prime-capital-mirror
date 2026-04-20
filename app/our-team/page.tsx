@@ -37,114 +37,42 @@ const boardMembers: MemberType[] = [
     role: "Board Chairperson",
     edu: "MBA, BA in Management",
     img: "/muk.jpg",
-    education: [
-      "MBA — Addis Ababa University",
-      "BA in Management — Haramaya University",
-    ],
-    exposure: [
-      "Over 17 years in consulting, finance, real estate, academia, and governance",
-      "Chairperson of the Board and Managing Partner at Elegance Group, overseeing consulting, real estate, and trading",
-      "Former Chairman at Hijra Bank (2020-2023); current Chairman at Credoks Tech Group (2023-Present)",
-      "Senior roles at Deloitte as Human Capital Manager and academic at Addis Ababa University",
-      "Led restructuring and advisory projects for banks, MFIs, and corporates in Africa, Middle East, Europe, and North America",
-      "Expertise in corporate governance, strategic management, organizational design, and Islamic finance",
-    ],
-    occupation: "Chairperson and Managing Partner, Elegance Group; Chairman, Credoks Tech Group",
-    bio: "Seasoned executive with 17+ years in finance and governance. Co-founder of Hijra Bank; expertise in strategic direction and financial sector growth in Ethiopia.",
+    summary:"An MBA graduate from Addis Ababa University and holder of a BA in Management from Haramaya University, he is a seasoned executive with over 17 years of experience spanning finance, consulting, real estate, academia, and governance. He serves as Chairperson and Managing Partner at Elegance Group and Chairman of Credoks Tech Group, and is a co-founder and former Chairman of Hijra Bank. His background includes senior roles at Deloitte and academic work at Addis Ababa University, with extensive experience leading advisory and restructuring projects across multiple regions. He specializes in strategic leadership, corporate governance, organizational design, and Islamic finance."
   },
   {
     name: "Tewodros M. Delelegn",
     role: "V/Board Chairperson",
     edu: "MSc in Telecom Business Administration, BA in Management",
     img: "/tewodros.jpg",
-    education: [
-      "MSc in Telecom Business Administration — Addis Ababa University",
-      "BA in Management — Addis Ababa University"
-    ],
-    exposure: [
-      "Managing Director at Credoks Digital Services",
-      "Board Chairman at NEO Microfinance (MFI)",
-      "8 years at Ethio Telecom in senior product development roles",
-      "20 years in telecom & fintech leadership"
-    ],
-    qualifications: "Leadership, innovation, and financial technology expertise",
-    occupation: "Managing Director, Credoks Digital Services; Board Chairman, NEO Microfinance (MFI)",
-    bio: "Telecom and fintech executive with strong governance and product innovation background."
+    summary:"An MSc graduate in Telecom Business Administration and BA holder in Management from Addis Ababa University, he is a telecom and fintech executive with over 20 years of leadership experience. He currently serves as Managing Director at Credoks Digital Services and Board Chairman of NEO Microfinance. His background includes eight years at Ethio Telecom in senior product development roles, with strong expertise in leadership, innovation, governance, and financial technology."
   },
   {
     name: "Habib Mohammed",
     role: "Board Member",
     edu: "MBA in International Business, BA in Accounting",
     img: "/habib.jpg",
-    education: [  
-      "MBA in International Business — University of Greenwich (UK)",
-      "BA in Accounting — Jimma University",
-      "Fellow Chartered Certified Accountant (FCCA)",
-      "Certified Member — Chartered Institute for Securities & Investment (CISI)",
-    ],
-    exposure: [
-      "20+ years of leadership in banking and Corporate management",
-      "Vice President for Banking Business at Hijra Bank; former CEO at Yekatit Paper Converting PLC",
-      "Over a decade at NIB International Bank, rising to Director levels",
-      "Advisor and trainer for World Bank Group (IFC) and National Bank of Ethiopia on IFRS and capital markets",
-    ],
+    summary:"An MBA graduate in International Business from University of Greenwich and BA holder in Accounting from Jimma University, he is a Fellow Chartered Certified Accountant (FCCA) and a certified member of the Chartered Institute for Securities & Investment (CISI). With over 20 years of leadership experience in banking and corporate management, he has served as Vice President for Banking Business at Hijra Bank and CEO of Yekatit Paper Converting PLC, and spent more than a decade at NIB International Bank in senior leadership roles. He has also worked as an advisor and trainer for the World Bank Group (IFC) and the National Bank of Ethiopia on IFRS and capital markets. He currently serves on the boards of Chartered Advisory Services PLC and Best Western Plus Addis Ababa."
   },
   {
     name: "Behailu Aregahgn",
     role: "Board Member",
     edu: "MBA in International Business, BA in Economics",
     img: "/behailu2.jpg",
-    education: [
-      "MBA in International Business — Mekelle University",
-      "BA in Economics — Debub University",
-    ],
-    exposure: [
-      "Managing Partner & Lead Consultant at Chartered Advisory Services PLC",
-      "Representative of Global DWC LLC in Ethiopia and East Africa",
-      "Drove business development with Ethio Telecom, Ingenico, and UROVO",
-      "Former COO at Thabet Technology PLC; managed major enterprise projects including National Bank’s EATS system at Ethio Telecom",
-      "Director of Operations & Business Development at WebSprix IT Solutions PLC",
-      "Served Ethiotelecom as key Account Manager; managed enterprise and government projects"
-    ],
+    summary:"An MBA graduate in International Business from Mekelle University and BA holder in Economics from Debub University, he is an experienced business and technology consultant with a strong background in advisory and operations. He serves as Managing Partner and Lead Consultant at Chartered Advisory Services PLC and represents Global DWC LLC in Ethiopia and East Africa. His experience includes leadership roles at Thabet Technology PLC and WebSprix IT Solutions PLC, as well as extensive work with Ethio Telecom on enterprise and government projects, including major systems such as the National Bank’s EATS platform."
   },
   {
     name: "Kalkidan Nigusse",
     role: "Board Member",
     edu: "Master’s in Marketing Management, Master’s in Development Management, BA in Economics",
     img: "/kalidan.jpg",
-    education: [
-      "Master’s in Marketing Management — Addis Ababa University",
-      "Master’s in Development Management — University of Torino (ITC, Italy)",
-      "BA in Economics — Addis Ababa University",
-    ],
-    exposure: [
-      "Managing Director at iConnect Digital Services",
-      "Board Member at NEO Microfinance Institution (MFI) and Credoks Digital Services PLC",
-      "Contributes to strategic leadership and organizational development",
-      "Over 15 years in telecom and digital service sectors",
-      "Senior leadership at Ethio Telecom; key role in nationwide rebranding and major initiatives",
-      "Led marketing strategy, research, intelligence, and international business development",
-      "Drove growth and innovation",
-      "Expertise in strategic management, marketing, project leadership, and business development",
-    ],
+    summary:"He holds a Master’s in Marketing Management from Addis Ababa University, a Master’s in Development Management from University of Torino, and a BA in Economics from Addis Ababa University. He is the Managing Director of iConnect Digital Services and serves on the boards of NEO Microfinance Institution and Credoks Digital Services PLC. With over 15 years of experience in telecom and digital services, he has held senior leadership roles at Ethio Telecom, contributing to nationwide rebranding, marketing strategy, research, and international business development. He specializes in strategic management, marketing, project leadership, and business growth."
   },
   {
     name: "Banteyrga Kebede",
     role: "Board Member",
     edu: "MBA in Telecom Business Administration, BA in Management",
     img: "/banteyerga.jpg",
-    education: [
-      "MBA in Telecom Business Administration",
-      "BA in Management",
-    ],
-    exposure: [
-      "Managing Partner at Chartered Advisory Services PLC; Board Member at NEO Microfinance Institution (MFI), contributing to strategic planning, governance, and organizational growth",
-      "Over 15 years of leadership experience across telecom, manufacturing, and service sectors",
-      "Held senior positions including CEO, Senior Officer, and Managing Partner, leading initiatives in organizational restructuring, operational efficiency, and new product development",
-      "Successfully driven profitability, achieved ISO certifications, and led HR transformation programs covering recruitment, training, and performance management",
-      "Expertise in leadership, operations, finance, and telecom innovation",
-      "Recognized for results-driven approach and commitment to excellence",
-    ],
+    summary:"He holds an MBA in Telecom Business Administration and a BA in Management from Addis Ababa University. With over 15 years of leadership experience across telecom, manufacturing, and service sectors, he currently serves as Managing Partner at Chartered Advisory Services PLC and Board Member of NEO Microfinance Institution. Throughout his career, he has held senior roles including CEO and Managing Partner, leading organizational restructuring, operational improvements, and product development initiatives. He has also driven profitability growth, ISO certifications, and HR transformation programs, and is recognized for his strong expertise in leadership, operations, finance, and telecom innovation."
   }
 ];
 
@@ -155,21 +83,7 @@ const execMembers: MemberType[] = [
     edu: "MBA in International Business, BA in Accounting, FCCA, CISI",
     appointed:true,
     img: "/habib2.jpg",
-    education: [
-      "MBA in International Business — University of Greenwich (UK)",
-      "BA in Accounting — Jimma University",
-      "Fellow Chartered Certified Accountant (FCCA)",
-      "Certified Member — Chartered Institute for Securities & Investment (CISI)",
-    ],
-    exposure: [
-      "Over 20 years in banking, finance, and corporate management",
-      "CEO and Executive Board Member, guiding strategic growth, governance, and financial management",
-      "Vice President for Banking Business at Hijra Bank (2021-2025); oversaw treasury, credit risk, and foreign exchange operations",
-      "Former CEO at Yekatit Paper Converting PLC (2015-2021); achieved ISO certification, IFRS adoption, and strong business growth",
-      "Over a decade at NIB International Bank; advanced to Director of Domestic Banking and Director of Credit Management",
-      "Advisor and trainer for World Bank Group (IFC) on IFRS adoption",
-      "Current Board Member at Chartered Advisory Services PLC and Best Western Plus Addis Ababa",
-    ],
+    summary:"He holds an MBA in International Business from University of Greenwich and a BA in Accounting from Jimma University, and is a Fellow Chartered Certified Accountant (FCCA) as well as a certified member of the Chartered Institute for Securities & Investment (CISI). With over 20 years of experience in banking, finance, and corporate management, he has served as CEO and Executive Board Member, driving strategic growth and governance across multiple institutions. He was Vice President for Banking Business at Hijra Bank, overseeing treasury, credit risk, and foreign exchange operations, and previously served as CEO of Yekatit Paper Converting PLC, achieving key milestones such as ISO certification and IFRS adoption. He also spent over a decade at NIB International Bank in senior leadership roles. Additionally, he has advised the World Bank Group’s International Finance Corporation on IFRS implementation and currently serves on the boards of Chartered Advisory Services PLC and Best Western Plus Addis Ababa."
   },
   {
     name: "Haileleul Kassa",
@@ -177,19 +91,7 @@ const execMembers: MemberType[] = [
     edu: "MSc in International Business, BA in Economics",
     appointed:true,
     img: "/haile.jpg",
-    education: [
-      "MSc in International Business",
-      "BA in Economics",
-      "Certifications from CISI, CFI, and Udacity; ongoing ACCA studies",
-    ],
-    exposure: [
-      "Over 14 years in banking, corporate strategy, and performance management",
-      "Director of Corporate Strategy at Ayat Group S.C.; leads five-year strategy, performance systems, and transformation",
-      "Senior Manager of Strategy Planning & Monitoring at Hijra Bank; led strategic planning and change management",
-      "Senior Manager of Corporate Investment at Hijra Bank; developed corporate performance frameworks",
-      "Earlier roles at Hibret Bank, Nib International Bank, and Global Bank Ethiopia in trade finance, credit, and planning",
-      "Specializes in corporate strategy, investment analysis, capital market operations, and performance management",
-    ],
+    summary:"He holds an MSc in International Business and a BA in Economics, along with professional certifications from CISI, CFI, and Udacity, and is currently pursuing ACCA studies. With over 14 years of experience in banking and corporate strategy, he has held key leadership roles including Director of Corporate Strategy at Ayat Group S.C., where he leads five-year strategic planning, performance systems, and organizational transformation. He also served as Senior Manager of Strategy Planning & Monitoring and Corporate Investment at Hijra Bank, focusing on strategic execution and performance frameworks. Earlier in his career, he worked at Hibret Bank, Nib International Bank, and Global Bank Ethiopia in areas including trade finance, credit, and planning. He specializes in corporate strategy, investment analysis, capital markets, and performance management."
   },
   {
     name: "Habtemariam Geta",
@@ -197,19 +99,7 @@ const execMembers: MemberType[] = [
     edu: "MBA in Project Management, BSc in Electrical Engineering",
     appointed:true,
     img: "/habte-new.jpg",
-    education: [
-      "MSc in Accounting and Finance Addis Ababa University, Addis Ababa, Ethiopia | 10/2016 – 07/2018",
-      "BA in Accounting and Finance Woldia University, Woldia,Ethiopia | 12/2012 – 07/2015",
-    ],
-    exposure: [
-      "SENIOR FINANCIAL ANALYST- CAPITAL MARKET AND INVESTMENT BANK PROJECTAmhara Bank, Addis Ababa, Ethiopia | 10/2023 - Present",
-      "LECTURER OF ACCOUNTING AND FINANCE ST. MARY'S UNIVERSITY, ADDIS ABABA, ETHIOPIA | 02/2023 - 10/2023",
-      "LECTURER IN ACCOUNTING AND FINANCE WOLDIA UNIVERSITY, WOLDIA, ETHIOPIA | 07/2018 - 02/2023",
-      "INVESTMENT BANKING VIRTUAL REALITY INTERN AT CITI BANK CORPORATEI",
-      "NVESTMENT BANKING VIRTUAL SIMULATION JOB AT STANDARD BANK",
-      "INVESTMENT MANAGEMENT VIRTUAL JOB SIMULATION AT FIDELITY INTERNATIONAL",
-      "12-week MBA, Leadership program from Abilitie",
-    ],
+    summary:"He holds an MSc in Accounting and Finance from Addis Ababa University and a BA in Accounting and Finance from Woldia University. He is currently a Senior Financial Analyst on the Capital Market and Investment Bank Project at Amhara Bank. Previously, he worked as a Lecturer of Accounting and Finance at St. Mary's University and Woldia University. He has also completed investment banking virtual simulations with Citi Bank, Standard Bank, and Fidelity International, as well as a 12-week MBA leadership program from Abilitie. His expertise lies in financial analysis, investment banking, accounting, and finance education."
   },
   {
     name: "Agazi Hailesilasse",
@@ -217,17 +107,7 @@ const execMembers: MemberType[] = [
     edu: "Bachelors of art in Accounting and finance",
     appointed:true,
     img: "/agazi.jpg",
-    education: [
-      "Bachelors of art in Accounting and finance",
-      "Bachelors of art in Management",
-    ],
-    exposure: [
-      "Monitoring and analyzing local and global financial news, economic indicators, and market trends to identify potential trading opportunities",
-      "Designing, developing, and back testing innovative trading strategies (both discretionary and quantitative). Executing",
-      "Executing trades across multiple financial markets (stocks, bonds, & treasury bills.) using the firm's capital.",
-      "Applying rigorous risk management techniques to quantify, monitor, and manage the risk associated with trading positions and adhere to firm policies.",
-      "Maintaining detailed records of trades, analyzing performance, and reporting insights and results to management and the broader team.",
-    ],
+    summary:"He holds bachelor’s degrees in Accounting and Finance, as well as Management. He works in financial trading and market analysis, focusing on monitoring global and local economic trends to identify trading opportunities. His experience includes designing, backtesting, and executing trading strategies across stocks, bonds, and treasury bills using firm capital. He applies strict risk management practices, maintains detailed trade records, and reports performance insights to management, contributing to data-driven investment decision-making."
   },
 {
     name: "Yitages Tefera",
@@ -235,16 +115,7 @@ const execMembers: MemberType[] = [
     edu: "Fellow of the Association of Chartered Certified Accountants (FCCA, UK)",
     appointed:true,
     img: "/yitages.jpg",
-    education: [
-      "Fellow of the Association of Chartered Certified Accountants (FCCA, UK)",
-      "Member of the Institute of Chartered Certified Accountants",
-    ],
-    exposure: [
-      "Over 10 years of experience in Auditing, Accounting, Risk management.",
-      "Professional expertise includeing Audit and assurance services, IFRS and IPSAS consulting, Financial statement preparation and analysis, Identifying business opportunities.",
-      "Leading audit engagements for business and non-profit clients, Ensuring compliance with international financial reporting standards and Ethiopian legal frameworks.",
-      "Financial oversight, Risk assessments, Advisory services.",
-    ],
+    summary:"He is a Fellow of the Association of Chartered Certified Accountants (FCCA) from Association of Chartered Certified Accountants and a member of the Institute of Chartered Certified Accountants. With over 10 years of experience in auditing, accounting, and risk management, he specializes in audit and assurance services, IFRS and IPSAS consulting, and financial statement preparation and analysis. He has led audit engagements for both business and non-profit organizations, ensuring compliance with international financial reporting standards and Ethiopian legal frameworks, while also providing financial oversight, risk assessment, and advisory services."
   },
   {
     name: "Getahun Worku",
@@ -252,19 +123,7 @@ const execMembers: MemberType[] = [
     edu: "Bachelors of art in Accounting and finance",
     appointed:true,
     img: "/getahun.jpg",
-    education: [
-      "LLM in Human Rights",
-      "MBA in Governance and Development",
-      "Currently pursuing a PhD in Law",
-    ],
-    exposure: [
-      "Over 20 years of experience in Legal advisory, Compliance, Governance, and Academic instruction in Ethiopia.",
-      "Professional expertise including Contract law, Labor law, Procurement, Banking regulation, Donor agreements, Institutional governance frameworks.",
-      "Providing high-level legal counsel on grant agreements, Memoranda of understanding, Project design, Monitoring, and Regulatory compliance.",
-      "Previous roles include senior legal positions at NIB International Bank and the Commercial Bank of Ethiopia, as well as academic and advisory roles in higher education and legal organizations.",
-      "Licensed advocate and consultant before all Federal Courts of Ethiopia, and member of the Ethiopian Bar Association and Ethiopian Women Lawyers Association.",
-      "Strengthening organizational risk management, Regulatory compliance, and Corporate governance capacity through legal practice and advisory."
-    ],
+    summary:"He holds an LLM in Human Rights and an MBA in Governance and Development, and is currently pursuing a PhD in Law. With over 20 years of experience in legal advisory, compliance, governance, and academic instruction in Ethiopia, she specializes in contract law, labor law, procurement, banking regulation, donor agreements, and institutional governance frameworks. She has provided high-level legal counsel on grant agreements, MOUs, project design, monitoring, and regulatory compliance. Her career includes senior legal roles at NIB International Bank and the Commercial Bank of Ethiopia, alongside academic and advisory positions in higher education and legal institutions. She is a licensed advocate before all Federal Courts of Ethiopia and a member of both the Ethiopian Bar Association and Ethiopian Women Lawyers Association, with strong expertise in governance, compliance, and organizational risk management."
   },
   {
     name: "Hassen Mohammed Ali",
@@ -272,20 +131,7 @@ const execMembers: MemberType[] = [
     edu: "MBA in IT Management",
     appointed:true,
     img: "/placeholder.png",
-    education: [
-     "MBA in IT Management",
-    "MSc in Information Technology",
-    "BSc in Computer Science"
-    ],
-    exposure: [
-    "Over 20 years of experience in Digital transformation, Enterprise systems management, IT governance, and Financial technology innovation.",
-    "Led large-scale telecom and banking projects including ERP, BSS/OSS, CRM, Billing systems, and Digital financial services.",
-    "Strong focus on Sharia-compliant Islamic banking solutions and aligning IT strategy with business objectives.",
-    "Providing strategic leadership in retail banking growth, Digital channel expansion, and End-to-end digital transformation initiatives.",
-    "Experience managing multi-vendor environments, Implementing digital financial services, and Ensuring compliance with Sharia principles.",
-    "Previous leadership and technical roles at Hijra Bank and Ethio Telecom, including core banking, Mobile wallet platforms, Business intelligence systems, and Enterprise IT architecture projects.",
-    "Driving digital innovation, Operational resilience, and Technology governance frameworks."
-  ]
+    summary:"He holds an MBA in IT Management, an MSc in Information Technology, and a BSc in Computer Science. With over 20 years of experience in digital transformation and IT leadership, he specializes in enterprise systems management, IT governance, and financial technology innovation. He has led major telecom and banking projects, including ERP, BSS/OSS, CRM, billing systems, and digital financial services, with a strong focus on Sharia-compliant Islamic banking solutions. His career includes senior roles at Hijra Bank and Ethio Telecom, where he worked on core banking systems, mobile wallets, business intelligence, and enterprise IT architecture. He provides strategic leadership in digital transformation, retail banking growth, and technology governance, driving innovation and operational resilience."
   },
 ];
 

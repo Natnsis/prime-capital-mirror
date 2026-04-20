@@ -19,6 +19,7 @@ export type Member = {
   role: string;
   email?: string;
   education?: string[];
+  summary?: string;
   appointed?: boolean;
   exposure?: string[];
   qualifications?: string;
@@ -117,6 +118,14 @@ export default function MemberModal({
 
             {/* Body */}
             <div className="p-6 space-y-5 text-[#0E0066]">
+              {/*summary*/}
+              {member.summary && (
+                <div>
+                  <h4 className="font-semibold">Summary</h4>
+                  <p className="text-sm text-[#4A5565] mt-1">{member.summary}</p>
+                </div>
+              )}
+
               {/* Contact */}
               {member.email && (
                 <div>
